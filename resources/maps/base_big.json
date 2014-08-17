@@ -1,0 +1,8 @@
+{
+	"size": [200, 200],
+	"nb_cars": 5,
+	"map": "base_big.map",
+	"nb_laps": 5,
+	"name": "Big Base",
+	"description": "A very big map made for first tests"
+}
