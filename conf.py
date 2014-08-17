@@ -31,7 +31,7 @@ conf = {
 		'font': 'None'
 	},
 	'events': {
-		'key_repeat_delay': 200,
+		'key_repeat_delay': 1,
 		'key_repeat_interval': 1
 	},
 	'resources': {

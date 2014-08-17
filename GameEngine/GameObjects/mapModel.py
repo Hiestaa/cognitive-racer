@@ -83,6 +83,10 @@ class MapModel(GameObjectModel):
 						# drawings
 						self._map_ground[x][y] = MapModel.TARMAC_SYMBOL
 
+		# the tiles will be drawn on this surface once, then this surface will
+		# be drawn on the screen each frame
+		self._map_surface = None
+
 	def _find_starting_heading(self, pos):
 		if len(self._line) == 0:
 			raise Exception("Unable to find any starting line!")
@@ -145,4 +149,12 @@ class MapModel(GameObjectModel):
 	def cars(self):
 	    return self._cars
 	
+	@property
+	def mapSurface(self):
+	    return self._map_surface
+	def initMapSurface(self):
+		self._map_surface = pygame.Surface(
+			(self.size[0] * conf['resources']['game']['tile_size'],
+			 self.size[1] * conf['resources']['game']['tile_size']),
+			flags=pygame.HWSURFACE)
 	
